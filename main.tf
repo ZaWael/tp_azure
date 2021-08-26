@@ -177,3 +177,7 @@ resource "azurerm_linux_virtual_machine" "myterraformvm" {
         environment = "Terraform Azure Test"
     }
 }
+
+output "myVmIp" {
+  value = azurerm_public_ip.myterraformpublicip.id
+}
